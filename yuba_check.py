@@ -37,7 +37,7 @@ result = json.loads(html.text)['status_code']
 if result == 200:
     content='签到成功'
 else:
-    content= '签到失败（可能是cookie失效，请及时更新）'
+    content= '签到失败（可能是cookie失效，请及时更新.）'
 
 # 进行消息推送
 requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY,"斗鱼鱼吧签到",content))
