@@ -3,7 +3,7 @@ import requests, json,re,time
 cookie = ''
 # 这里是某主播鱼吧的id号，就是登录某主播鱼吧后url的最后几位数字
 group_id = 
-# 这里是server酱的推送key，如果是其他推送方式，可自行修改最后的推送方式
+# 这里是server酱的推送key。如果是其他推送方式，可自行修改最后的推送方式
 SCKEY = ''
 
 url_check = 'https://yuba.douyu.com/ybapi/topic/sign?timestamp='+str(int(time.time() / 100))
