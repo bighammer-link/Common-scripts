@@ -10,4 +10,4 @@
 3.放在GitHub Action上面，这个稍微麻烦一点，而且GitHub抵制 GitHub Action的滥用，不推荐<br/>
 4.还有很多种方法，可自行上网查询。<br/>
 
-[![HitCount](https://hits.dwyl.com/bighammer-link/Common-scripts Public Cannot fork because you own this repository and are not a member of any organi.svg?style=flat)](http://hits.dwyl.com/bighammer-link/Common-scripts Public Cannot fork because you own this repository and are not a member of any organi)
+  [![HitCount](https://hits.dwyl.com/bighammer-link/Common-scripts Public Cannot fork because you own this repository and are not a member of any organi.svg?style=flat&show=unique)](http://hits.dwyl.com/bighammer-link/Common-scripts Public Cannot fork because you own this repository and are not a member of any organi)
