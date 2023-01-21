@@ -9,7 +9,5 @@
 2.你如果拥有自己的服务器的话，可以部署在<b><a href="https://github.com/whyour/qinglong">青龙面板</a></b>上或者是<b><a href = "https://github.com/elecV2/elecV2P">elecV2P</a></b>上，作者都在使用的两个工具，推荐青龙面板，比较好操作。<br/>
 3.放在GitHub Action上面，这个稍微麻烦一点，而且GitHub抵制 GitHub Action的滥用，不推荐<br/>
 4.还有很多种方法，可自行上网查询。<br/>
-<br/>
-<br/>
 
-  [![HitCount](https://hits.dwyl.com/bighammer-link/Common-scripts Public Cannot fork because you own this repository and are not a member of any organi.svg?style=flat)](http://hits.dwyl.com/bighammer-link/Common-scripts Public Cannot fork because you own this repository and are not a member of any organi)
+[![HitCount](https://hits.dwyl.com/bighammer-link/Common-scripts Public Cannot fork because you own this repository and are not a member of any organi.svg?style=flat)](http://hits.dwyl.com/bighammer-link/Common-scripts Public Cannot fork because you own this repository and are not a member of any organi)
