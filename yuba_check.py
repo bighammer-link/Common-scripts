@@ -1,9 +1,9 @@
 import requests, json,re,time
 # 这里是登录到某个主播鱼吧后抓取的cookie
 cookie = ''
-# 这里是某主播鱼吧的id号，就是登录某主播鱼吧后url的最后几位数字
+# 这里是某主播鱼吧的id号，就是登录某主播鱼吧后，地址栏中的最后几位数字
 group_id = 
-# 这里是server酱的推送key。如果是其他推送方式，可自行修改最后的推送方式
+# 这里是server酱的推送key。如果是其他推送方式，可自行修改最后的推送方式，不想使用的话，直接忽略
 SCKEY = ''
 
 url_check = 'https://yuba.douyu.com/ybapi/topic/sign?timestamp='+str(int(time.time() / 100))
@@ -36,13 +36,16 @@ html = requests.post(url=url_check, headers=headers,data=data)
 result = json.loads(html.text)['status_code']
 if result == 200:
     content='签到成功'
-    requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY,"斗鱼鱼吧签到",content))
+    if SCKEY != '':
+        requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, "超话签到", content))
 elif:
     content = '今天已经签到了'
-    requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY,"斗鱼鱼吧签到",content))
+    if SCKEY != '':
+        requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, "超话签到", content))
 else:
     content= '签到失败（可能是cookie失效，请及时更新）'
-    requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY,"斗鱼鱼吧签到",content))
+    if SCKEY != '':
+        requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, "超话签到", content))
 
 
 
