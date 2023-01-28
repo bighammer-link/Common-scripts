@@ -37,15 +37,15 @@ result = json.loads(html.text)['status_code']
 if result == 200:
     content='签到成功'
     if SCKEY != '':
-        requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, "超话签到", content))
+        requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, "鱼吧签到", content))
 elif:
     content = '今天已经签到了'
     if SCKEY != '':
-        requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, "超话签到", content))
+        requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, "鱼吧签到", content))
 else:
     content= '签到失败（可能是cookie失效，请及时更新）'
     if SCKEY != '':
-        requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, "超话签到", content))
+        requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, "鱼吧签到", content))
 
 
 
