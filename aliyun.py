@@ -37,7 +37,7 @@ def daily_check(access_token):
 
                 return content
 
-    print()
+
 # 使用refresh_token更新access_token
 def update_token(refresh_token):
     url = 'https://auth.aliyundrive.com/v2/account/token'
