@@ -1,6 +1,6 @@
 import json
-import os, requests, datetime
-from time import mktime, time
+import  requests
+
 # refresh_token是一成不变的呢，我们使用它来更新签到需要的access_token
 refresh_token = ''
 # 使用Server酱的推送方式
