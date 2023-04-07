@@ -2,10 +2,24 @@ import requests, json,re,time
 # 这里是登录到某个主播鱼吧后抓取的cookie
 cookie = ''
 # 这里是某主播鱼吧的id号，就是登录某主播鱼吧后，地址栏中的最后几位数字
-group_id = 
-# 这里是server酱的推送key。如果 是其他推送方式，可自行修改最后的推送方式，不想使用的话，直接忽略
+group_id =
+# 这里是server酱的推送key。不想使用的话，直接忽略
 SCKEY = ''
-
+# 推送plus的token。不想使用的话直接忽略。
+Token = ''
+# 推送函数
+def push(content):
+    if SCKEY != '':
+        url = "https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, '斗鱼鱼吧签到', content)
+        requests.post(url)
+        print('推送完成')
+    elif Token != '':
+        headers = {'Content-Type': 'application/json'}
+        json = {"token": Token, 'title': '斗鱼鱼吧签到', 'content': content, "template": "json"}
+        resp = requests.post(f'http://www.pushplus.plus/send', json=json, headers=headers).json()
+        print('push+推送成功' if resp['code'] == 200 else 'push+推送失败')
+    else:
+        print('未使用消息推送推送！')
 url_check = 'https://yuba.douyu.com/ybapi/topic/sign?timestamp='+str(int(time.time() / 100))
 headers = {
     "authority": "yuba.douyu.com",
@@ -34,18 +48,16 @@ data = {
 }
 html = requests.post(url=url_check, headers=headers,data=data)
 result = json.loads(html.text)['status_code']
+
 if result == 200:
-    content='签到成功'
-    if SCKEY != '':
-        requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, "鱼吧签到", content))
-elif:
+    content ='签到成功'
+    print(content)
+    push(content)
+elif result == 1001:
     content = '今天已经签到了'
-    if SCKEY != '':
-        requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, "鱼吧签到", content))
+    print(content)
+    push(content)
 else:
-    content= '签到失败（可能是cookie失效，请及时更新）'
-    if SCKEY != '':
-        requests.post("https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, "鱼吧签到", content))
-
-
-
+    content = '签到失败（可能是cookie失效，请及时更新）'
+    print(content)
+    push(content)
