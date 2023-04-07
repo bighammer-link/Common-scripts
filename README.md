@@ -17,6 +17,10 @@
 2.你如果拥有自己的服务器的话，可以部署在<b><a href="https://github.com/whyour/qinglong">青龙面板</a></b>上或者是<b><a href = "https://github.com/elecV2/elecV2P">elecV2P</a></b>上，作者都在使用的两个工具，推荐青龙面板，比较好操作。<br/>
 3.放在GitHub Action上面，这个稍微麻烦一点，而且GitHub抵制 GitHub Action的滥用，不推荐<br/>
 4.还有很多种方法，可自行上网查询。<br/>
-
-## 有问题的话，请提issue
+# 附青龙使用教程：
+因为本仓库的脚本没有，添加环境变量等设置，所以需要手动到青龙添加脚本，很简单。
+示例（以阿里云盘aliyun.py为例）：
+脚本管理→新建脚本→文件名：aliyun.py → 复制本仓库aliyun.py的代码到你在青龙创建的脚本中，并在其中填入你的refresh_token和推送方式的key并且保存
+→定时任务→新建任务→名称随意，命令：task aliyun.py 定时规则自己决定。→大功告成
+## 有问题的话，请提issue。
  
