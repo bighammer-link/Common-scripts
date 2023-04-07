@@ -4,7 +4,7 @@
 不定时增加新脚本<br/>
 
 # 推送方式
-支持<b>server酱和推送plus </b>。
+支持<b><a href = "https://sct.ftqq.com/">server酱</a>和<a href = "http://www.pushplus.plus/">推送plus</a> </b>。
 将推送token或者是key填入相应的字段即可。
 
 
