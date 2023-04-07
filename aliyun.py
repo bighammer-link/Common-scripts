@@ -21,7 +21,7 @@ def push(content):
         resp = requests.post(f'http://www.pushplus.plus/send', json=json, headers=headers).json()
         print('push+推送成功' if resp['code'] == 200 else 'push+推送失败')
     else:
-        print('未使用消息推送推送')
+        print('未使用消息推送推送！')
 #签到函数
 def daily_check(access_token):
     url = 'https://member.aliyundrive.com/v1/activity/sign_in_list'
