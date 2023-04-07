@@ -6,12 +6,22 @@ import  requests
 refresh_token = ''
 # 使用Server酱的推送方式,不想使用的话直接忽略
 SCKEY = ''
+# 推送加token,使用推送plus，请将token填入下方引号中
+Token = ''
 
 #推送函数
 def push(content):
-    url = "https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, '阿里云盘签到', content)
-    requests.post(url)
-    print('推送完成')
+    if SCKEY != '':
+        url = "https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, '阿里云盘签到', content)
+        requests.post(url)
+        print('推送完成')
+    elif Token != '':
+        headers = {'Content-Type': 'application/json'}
+        json = {"token": Token, 'title': '阿里云盘签到', 'content': content, "template": "json"}
+        resp = requests.post(f'http://www.pushplus.plus/send', json=json, headers=headers).json()
+        print('push+推送成功' if resp['code'] == 200 else 'push+推送失败')
+    else:
+        print('未使用消息推送推送')
 #签到函数
 def daily_check(access_token):
     url = 'https://member.aliyundrive.com/v1/activity/sign_in_list'
@@ -56,8 +66,7 @@ def mian():
     access_token = update_token(refresh_token)
     print('更新成功，开始进行签到')
     content = daily_check(access_token)
-    if SCKEY != '':
-        push(content)
+    push(content)
 
 
 
