@@ -11,6 +11,7 @@ SCKEY = ''
 Token = ''
 # 推送函数
 def push(content):
+    if SCKEY != '':
         url = "https://sctapi.ftqq.com/{}.send?title={}&desp={}".format(SCKEY, '汽车之家签到', content)
         requests.post(url)
         print('推送完成')
