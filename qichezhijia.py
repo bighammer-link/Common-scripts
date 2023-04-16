@@ -3,7 +3,7 @@ import json
 import requests
 import re
 import time
-#填写cookie，（登录到汽车之家，点击个人头像转到我的汽车之家界面，抓取该页面的cookie）
+#填写cookie，（登录到汽车之家，点击个人头像转到我的汽车之家界面，抓取该页面的cookie。）
 cookie = ''
 #推送方式使用的是server酱，填写server酱的SCKEY
 SCKEY = ''
