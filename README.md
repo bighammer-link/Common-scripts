@@ -5,7 +5,7 @@
 
 
 # 推送方式
-支持<b><a href = "https://sct.ftqq.com/">server酱</a>和<a href = "http://www.pushplus.plus/">推送plus</a> </b>。
+支持<b><a href = "https://sct.ftqq.com/r/5126">server酱</a>和<a href = "http://www.pushplus.plus/">推送plus</a> </b>。
 将推送token或者是key填入相应的字段即可。
 
 
